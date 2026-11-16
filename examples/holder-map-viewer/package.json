@@ -1,0 +1,27 @@
+{
+  "name": "example-holder-map-viewer",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "A token's holder map in a browser: the engine builds the graph, the React viewer draws it. Runs on sample data with no network, or on one token read from an RPC endpoint.",
+  "scripts": {
+    "start": "tsx serve.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@soltoolkit/holder-map": "workspace:*",
+    "@soltoolkit/holder-map-react": "workspace:*",
+    "@soltoolkit/rpc": "^0.1.0",
+    "esbuild": "^0.27.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

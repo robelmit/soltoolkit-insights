@@ -1,0 +1,1060 @@
+{
+  "version": 1,
+  "updated": "2026-10-04",
+  "about": "Trading terminals, bots and wallet apps a trade can be placed through, with what identifies each on chain. This is the app, not the exchange the trade settled on. Sources: Dune Spellbook models, DefiLlama fee adapters, solana-dex-parser, the tradeSource ids of Codex, and transactions read on chain; each entry names its own in `source`. Detection order: a credit to a fee wallet (or a token account it owns), then a relayer that pays the network fee, then a router only one app invokes; on EVM a fee recipient, the router, an ERC-8021 builder code, a selector. sharedPrograms never attribute alone. Entries are observations with a date and a confidence; fee wallets and routers rotate.",
+  "platforms": [
+    {
+      "id": "axiom",
+      "name": "Axiom",
+      "short": "AX",
+      "kind": "terminal",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "FLASHX8DrLbgeR8FcfNV1F5krxYcYMUdBkrP1EPBtxB9",
+          "BLUR9cL8HqZzu5bSaC7VRX25RCG93Hv3T6NPyKxQhWUT"
+        ],
+        "feeWallets": [
+          "7LCZckF6XXGQ1hDY6HFXBKWAtiUgL9QY5vj1C4Bn1Qjj",
+          "4V65jvcDG9DSQioUVqVPiUcUY9v6sb6HKtMnsxSKEz5S",
+          "CeA3sPZfWWToFEBmw5n1Y93tnV66Vmp8LacLzsVprgxZ",
+          "AaG6of1gbj1pbDumvbSiTuJhRCRkkUNaWVxijSbWvTJW",
+          "7oi1L8U9MRu5zDz5syFahsiLUric47LzvJBQX6r827ws",
+          "9kPrgLggBJ69tx1czYAbp7fezuUmL337BsqQTKETUEhP",
+          "DKyUs1xXMDy8Z11zNsLnUg3dy9HZf6hYZidB6WodcaGy",
+          "4FobGn5ZWYquoJkxMzh2VUAWvV36xMgxQ3M7uG1pGGhd",
+          "76sxKrPtgoJHDJvxwFHqb3cAXWfRHFLe3VpKcLCAHSEf",
+          "H2cDR3EkJjtTKDQKk8SJS48du9mhsdzQhy8xJx5UMqQK",
+          "8m5GkL7nVy95G4YVUbs79z873oVKqg2afgKRmqxsiiRm",
+          "4kuG6NsAFJNwqEkac8GFDMMheCGKUPEbaRVHHyFHSwWz",
+          "8vFGAKdwpn4hk7kc1cBgfWZzpyW3MEMDATDzVZhddeQb",
+          "86Vh4XGLW2b6nvWbRyDs4ScgMXbuvRCHT7WbUT3RFxKG",
+          "DZfEurFKFtSbdWZsKSDTqpqsQgvXxmESpvRtXkAdgLwM",
+          "5L2QKqDn5ukJSWGyqR4RPvFvwnBabKWqAqMzH4heaQNB",
+          "DYVeNgXGLAhZdeLMMYnCw1nPnMxkBN7fJnNpHmizTrrF",
+          "Hbj6XdxX6eV4nfbYTseysibp4zZJtVRRPn2J3BhGRuK9",
+          "846ah7iBSu9ApuCyEhA5xpnjHHX7d4QJKetWLbwzmJZ8",
+          "5BqYhuD4q1YD3DMAYkc1FeTu9vqQVYYdfBAmkZjamyZg"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x9689992f5b5c09447f15906d8d11214944488341"
+          ],
+          "base": [
+            "0x9689992f5b5c09447f15906d8d11214944488341"
+          ],
+          "bsc": [
+            "0x9689992f5b5c09447f15906d8d11214944488341"
+          ]
+        },
+        "selectors": {
+          "eth": [
+            "0x3e0f9c3c"
+          ],
+          "base": [
+            "0x3e0f9c3c"
+          ],
+          "bsc": [
+            "0x3e0f9c3c"
+          ]
+        },
+        "feeWallets": [
+          "0xcbbccdfcd209deca1b564436060fff13fa2db59c",
+          "0xdd8431ce6a62698708292ec5508a3708a0bf1226",
+          "0xdec29d79e8cdf009d2fa33e0558cb5648481cac3"
+        ]
+      },
+      "aliases": [
+        "axiom",
+        "axiom-flash",
+        "axiom_flash",
+        "axiom-trade"
+      ],
+      "exclude": [
+        "AxiomRXZAq1Jgjj9pHmNqVP7Lhu67wLXZJZbaK87TTSk",
+        "AxiomRYAid8ZDhS1bJUAzEaNSr69aTWB9ATfdDLfUbnc",
+        "VAULTkV5rgY9WqZtvaMHvctrKMwQw8bCfSJF4nga2D4"
+      ],
+      "confidence": "high",
+      "source": "Solana: router FLASHX (v1 txs) + rotating pool of 20 fee wallets (solana-dex-parser, DefiLlama fees/axiom); EVM medium: router 0x9689…8341 selector axiomTrade, owner 0x20752ADb…"
+    },
+    {
+      "id": "gmgn",
+      "name": "GMGN",
+      "short": "GM",
+      "kind": "terminal",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "GMGNreQcJFufBiCTLDBgKhYEfEe9B454UjpDr5CaSLA1",
+          "GMgnVFR8Jb39LoXsEVzb3DvBy3ywCmdmJquHUy1Lrkqb",
+          "DGMgNKpqygARV2pHZfW4kNQSHT9F3Ly2BKWqvpYrAg5C"
+        ],
+        "feeWallets": [
+          "BB5dnY55FXS1e1NXqZDwCzgdYJdMCj3B92PU6Q5Fb6DT",
+          "7sHXjs1j7sDJGVSMSPjD1b4v3FD6uRSvRWfhRdfv5BiA",
+          "HeZVpHj9jLwTVtMMbzQRf6mLtFPkWNSg11o68qrbUBa3",
+          "ByRRgnZenY6W2sddo1VJzX9o4sMU4gPDUkcmgrpGBxRy",
+          "DXfkEGoo6WFsdL7x6gLZ7r6Hw2S6HrtrAQVPWYx2A1s9",
+          "3t9EKmRiAUcQUYzTZpNojzeGP1KBAVEEbDNmy6wECQpK",
+          "DymeoWc5WLNiQBaoLuxrxDnDRvLgGZ1QGsEoCAM7Jsrx",
+          "dBhdrmwBkRa66XxBuAK4WZeZnsZ6bHeHCCLXa3a8bTJ",
+          "6TxjC5wJzuuZgTtnTMipwwULEbMPx5JPW3QwWkdTGnrn"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x4313c378cc91ea583c91387b9216e2c03096b27f"
+          ],
+          "base": [
+            "0xd8ba9d1a99fc21f0eca24e9b85737c28a194a4e2"
+          ],
+          "bsc": [
+            "0x1de460f363af910f51726def188f9004276bf4bc"
+          ]
+        },
+        "selectors": {
+          "eth": [
+            "0xeffbec13"
+          ],
+          "bsc": [
+            "0x4d819a2a"
+          ]
+        },
+        "builderCodes": [
+          "bc_ipu1jetp"
+        ],
+        "feeWallets": [
+          "0xb8159ba378904f803639d274cec79f788931c9c8"
+        ]
+      },
+      "aliases": [
+        "gmgn",
+        "gmgn.ai",
+        "gmgn-ai"
+      ],
+      "exclude": [
+        "EzcD6Kc7GYBqBdRo6Lnv3YiwpAUtxYtb5xKWw8r7Q7H8",
+        "Tw5uhE2uyApRCt9LqN6qMSiEeLYvzvC3P5ToEvTeGEi",
+        "69SNcRC8NqjHBSXEcugCN5oFKRQoKmddmWzZYc3tqtxk"
+      ],
+      "confidence": "high",
+      "source": "Solana fee wallets decide (routers rotate); EVM routers observed on chain 2026-10-03, ERC-8021 code bc_ipu1jetp on Base; Codex tradeSource id gmgn"
+    },
+    {
+      "id": "photon",
+      "name": "Photon",
+      "short": "PH",
+      "kind": "terminal",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "BSfD6SHZigAfDWSjzD5Q41jw8LmKwtmjskPH9XW1mrRW"
+        ],
+        "feeWallets": [
+          "AVUCZyuT35YSuj4RH7fwiyPu82Djn2Hfg7y2ND2XcnZH"
+        ]
+      },
+      "aliases": [
+        "photon",
+        "photon-sol"
+      ],
+      "confidence": "high",
+      "source": "Bitquery Photon API docs (router), Dune solana bot_trades (fee wallet)"
+    },
+    {
+      "id": "trojan",
+      "name": "Trojan",
+      "short": "TJ",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "troyXT7Ty3s2rjJe4bqWaroUrS4Fjd8rbHHNHxcACF4",
+          "TroYL71c8P2XNtDxHs98VtVLuiASJ7Ao5FvUoKyp3Bk",
+          "troY36YiPGqMyAYCNbEqYCdN2tb91Zf7bHcQt7KUi61"
+        ],
+        "feeWallets": [
+          "9yMwSPk9mrXSN7yDHUuZurAh1sjbJsfpUqjZ7SvVtdco",
+          "BBYXdwhqbCxVRVtnuMTTxh8biNisz3ZxsnHfr44jXytR",
+          "92Med3qeK7duC5iiYsHX38H2f2twJfRsSx93oNrza2VH",
+          "2jwHNxavSoMZMEDbT1eV9PcPt5dDcayCqM6MkgaPpmWQ",
+          "65gDv7pZQCZELsNpNYSFEBtNFpWZAbxmRFB6BGMqFkHH",
+          "BWgb8wR1FEGiu1jCDSKuHKf752W27b4iN6SvoNCiK4qp",
+          "8jgg7moFJkHyTtAv9M6RBSPMp2oXeXhuiUMKW8YbYCWn"
+        ]
+      },
+      "aliases": [
+        "trojan",
+        "trojan-terminal",
+        "trojan-bot"
+      ],
+      "confidence": "high",
+      "source": "solana-dex-parser, read 2026-09-27 (bot and terminal routers), Dune bot_trades"
+    },
+    {
+      "id": "padre",
+      "name": "Padre",
+      "short": "PD",
+      "kind": "terminal",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "term9YPb9mzAsABaqN71A4xdbxHmpBNZavpBiQKZzN3",
+          "9Fox6i7oT8p4qHn76Qj3dks8RRMGsXQyfMSBScA5yVyX"
+        ],
+        "feeWallets": [
+          "J5XGHmzrRmnYWbmw45DbYkdZAU2bwERFZ11qCDXPvFB5",
+          "DoAsxPQgiyAxyaJNvpAAUb2ups6rbJRdYrCPyWxwRxBb"
+        ]
+      },
+      "aliases": [
+        "padre",
+        "terminal",
+        "terminal-padre",
+        "padre-terminal"
+      ],
+      "confidence": "high",
+      "source": "solana-dex-parser (router term9…, v1 txs); Codex tradeSource terminal-padre \"Terminal (formerly Padre)\""
+    },
+    {
+      "id": "bonkbot",
+      "name": "BONKbot",
+      "short": "BK",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "sharedPrograms": [
+          "CxvksNjwhdHDLr3qbCXNKVdeYACW8cs93vFqLqtgyFE5",
+          "BBRouter1cVunVXvkcqeKkZQcBK7ruan37PPm3xzWaXD"
+        ],
+        "feeWallets": [
+          "ZG98FUCjb8mJ824Gbs6RsgVmr1FhXb2oNiJHa2dwmPd",
+          "HVbzPxiet4ZgAP6CySVouY8RC3MNxgS35MgE3pWvUVC8"
+        ]
+      },
+      "aliases": [
+        "bonkbot",
+        "bonk-bot",
+        "bonk_bot"
+      ],
+      "confidence": "high",
+      "source": "routers shared with Telemetry, so the fee wallet decides (ZG98… and its WSOL account HVbz…)"
+    },
+    {
+      "id": "telemetry",
+      "name": "Telemetry",
+      "short": "TM",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "sharedPrograms": [
+          "CxvksNjwhdHDLr3qbCXNKVdeYACW8cs93vFqLqtgyFE5",
+          "BBRouter1cVunVXvkcqeKkZQcBK7ruan37PPm3xzWaXD"
+        ],
+        "feeWallets": [
+          "FBYmU5XbRgX2DV2i2SpPPpHpXmf6mdZS98wQChmUyMba"
+        ]
+      },
+      "aliases": [
+        "telemetry"
+      ],
+      "confidence": "medium",
+      "source": "shares BONKbot's routers; fee wallet decides"
+    },
+    {
+      "id": "bloom",
+      "name": "Bloom",
+      "short": "BL",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "b1oomGGqPKGD6errbyfbVMBuzSC8WtAAYo8MwNafWW1"
+        ],
+        "feeWallets": [
+          "7HeD6sLLqAnKVRuSfc1Ko3BSPMNKWgGTiWLKXJF31vKM"
+        ]
+      },
+      "aliases": [
+        "bloom",
+        "bloom-bot",
+        "bloombot"
+      ],
+      "exclude": [
+        "77k7gzmr7UAtGUrWeL3oA5ZHvmufavZWFzCkQstb3w1c",
+        "6yjgxVSev9QRe7CB3H3xziWysgtCa3qEuwnUWQQuQfAi"
+      ],
+      "confidence": "high",
+      "source": "solana-dex-parser programs (bot tag), Dune bot_trades; relayers excluded"
+    },
+    {
+      "id": "maestro",
+      "name": "Maestro",
+      "short": "MA",
+      "kind": "bot",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "MaestroAAe9ge5HTc64VbBQZ6fP77pwvrhM8i1XWSAx"
+        ],
+        "feeWallets": [
+          "MaestroUL88UBnZr3wfoN7hqmNWFi3ZYCGqZoJJHE36",
+          "FRMxAnZgkW58zbYcE7Bxqsg99VWpJh6sMP5xLzAWNabN"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x80a64c6d7f12c47b7c66c5b4e20e72bc1fcd5d9e",
+            "0x4b8c0a0df725750aeb948816b4dffecd32ee9008"
+          ]
+        },
+        "feeWallets": [
+          "0xb0999731f7c2581844658a9d2ced1be0077b7397"
+        ]
+      },
+      "aliases": [
+        "maestro",
+        "maestro-bot"
+      ],
+      "confidence": "high",
+      "source": "v1 txs on Solana; EVM routers rotate, fee wallet on all three chains (fee may travel in a separate tx)"
+    },
+    {
+      "id": "banana",
+      "name": "Banana Gun",
+      "short": "BG",
+      "kind": "bot",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "BANANAjs7FJiPQqJTGFzkZJndT9o7UmKiYYGaJz6frGu"
+        ],
+        "feeWallets": [
+          "JBok73TJsWdgeJy2x59TaTFKtngtxeYPvizafTnhvMGV",
+          "6nPV8EChoA3HUZRbFmM6cXDv41NApX9ALKwDw4vYfjWp",
+          "35q8cao77A8ceJVxQaoN5w9kyTjTJUsmQcy2RRNrJBMc",
+          "3spK1TmrAnFUDRN2bErDAVw225tLE7uFpQeP9WNXP2nY",
+          "36ZCrKd6N9iGmArccia15saDyepL5wShHJyGTvea3Akf",
+          "47hEzz83VFR23rLTEeVm9A7eFzjJwjvdupPPmX3cePqF",
+          "4BBNEVRgrxVKv9f7pMNE788XM1tt379X9vNjpDH2KCL7",
+          "8r2hZoDfk5hDWJ1sDujAi2Qr45ZyZw5EQxAXiMZWLKh2",
+          "Cj297UauzMX64FU9dKJZRUBWszJ7tEWpVheasq4CfATV",
+          "HKMh8nV3ysSofRi23LsfVGLGQKB415QAEfZT96kCcVj4",
+          "7tQiiBdKoScWQkB1RmVuML7DBGnR31cuKPEtMM7Vy5SA",
+          "EMbqD9Y9jLXEa3RbCR8AsEW1kVa3EiJgDLVgvKh4qNFP",
+          "Lk693UiTzQC4vobasRS1QGcYA9D6RGYLjHp1bWreQtM"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0xdb5889e35e379ef0498aae126fc2cce1fbd23216",
+            "0x3328f7f4a1d1c57c35df56bbf0c9dcafca309c49"
+          ],
+          "base": [
+            "0x1fba6b0bbae2b74586fba407fb45bd4788b7b130",
+            "0xd0a8fc4e0ce78a20d96fde2e81ddf8de4b414419"
+          ],
+          "bsc": [
+            "0x461efe0100be0682545972ebfc8b4a13253bd602"
+          ]
+        }
+      },
+      "aliases": [
+        "banana",
+        "bananagun",
+        "banana-gun",
+        "banana_gun"
+      ],
+      "confidence": "high",
+      "source": "Dune Spellbook banana gun models (EVM), solana-dex-parser (fee wallets rotate, v1 txs)"
+    },
+    {
+      "id": "sigma",
+      "name": "Sigma",
+      "short": "SG",
+      "kind": "bot",
+      "chains": [
+        "eth",
+        "base"
+      ],
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x90c496dea71307da373ea6fbca54b24bf5025de3"
+          ],
+          "base": [
+            "0xd18ec6e3eb0dcabbe8d63b6c9f1640599677eaec"
+          ]
+        },
+        "selectors": {
+          "eth": [
+            "0x08c1284c"
+          ],
+          "base": [
+            "0x08c1284c"
+          ]
+        },
+        "builderCodes": [
+          "bc_01u2zjcc"
+        ],
+        "feeWallets": [
+          "0xb25750fa55b302c9a3997f64d24c0b14afdd3165"
+        ]
+      },
+      "aliases": [
+        "sigma",
+        "sigma-bot"
+      ],
+      "confidence": "high",
+      "source": "selector SigmaSwap(bytes), fee/deployer 0xB25750FA…; routers rotate"
+    },
+    {
+      "id": "bullx",
+      "name": "BullX",
+      "short": "BX",
+      "kind": "terminal",
+      "active": false,
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "feeWallets": [
+          "9RYJ3qr5eU5xAooqVcbmdeusjcViL5Nkiq7Gske3tiKq",
+          "F4hJ3Ee3c5UuaorKAMfELBjYCjiiLH75haZTKqTywRP3"
+        ]
+      },
+      "aliases": [
+        "bullx",
+        "bullx-neo"
+      ],
+      "confidence": "low",
+      "source": "marked inactive (trading reported paused, 2026-06); 9RYJ… receives dust, so only a credit above the minimum counts"
+    },
+    {
+      "id": "nova",
+      "name": "Nova",
+      "short": "NV",
+      "kind": "bot",
+      "active": false,
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "NoVA1TmDUqksaj2hB1nayFkPysjJbFiU76dT4qPw2wm",
+          "BujKR6saP3wZa7PEZ2u8ktyumdv8jqGsgHjUU7Ur7kLp"
+        ],
+        "feeWallets": [
+          "noVakKQGTTjpHARvecAUbVnc85AatCLm3ijDFk8JXZB",
+          "noVaE91mUL5jTb8e9Vf6dqJdNPzJpEQ3uAdnQ8h4nVz"
+        ]
+      },
+      "aliases": [
+        "nova"
+      ],
+      "confidence": "medium",
+      "source": "marked inactive (no recent transactions seen, 2026-08)"
+    },
+    {
+      "id": "fomo",
+      "name": "Fomo",
+      "short": "FO",
+      "kind": "app",
+      "chains": [
+        "sol",
+        "bsc",
+        "base",
+        "eth"
+      ],
+      "solana": {
+        "feeWallets": [
+          "R4rNJHaffSUotNmqSKNEfDcJE8A7zJUkaoM5Jkd7cYX",
+          "HrTf9CzXR1dRH4Sof5QrpmGWwpwAf3qZzwCsEjQpXcSq"
+        ],
+        "feePayers": [
+          "AgmLJBMDCqWynYnQiPCuj9ewsNNsBJXyzoUhD9LJzN51"
+        ]
+      },
+      "aliases": [
+        "fomo"
+      ],
+      "confidence": "high",
+      "source": "fee in USDC to R4rN… (DefiLlama fees/fomo); its relayer AgmL… pays the network fee; Codex tradeSource fomo"
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom",
+      "short": "PT",
+      "kind": "wallet",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "feeWallets": [
+          "25mYnjJ2MXHZH6NvTTdA63JvjgRVcuiaj6MRiEQNs1Dq",
+          "9yj3zvLS3fDMqi1F8zhkaWfq8TZpZWHe6cz1Sgt7djXf",
+          "8psNvWTrdNTiVRNzAgsou9kETXNJm2SXZyaKuJraVRtf",
+          "CnmA6Zb8hLrG33AT4RTzKdGv1vKwRBKQQr8iNckvv8Yg",
+          "2rQZb9xqQGwoCMDkpabbzDB9wyPTjSPj9WNhJodTaRHm",
+          "9gnLg6NtVxaASvxtADLFKZ9s8yHft1jXb1Vu6gVKvh1J",
+          "wtpXRqKLdGc7vpReogsRugv6EFCw4HBHcxm8pFcR84a",
+          "D1NJy3Qq3RKBG29EDRj28ozbGwnhmM5yBUp8PonSYUnm"
+        ]
+      },
+      "aliases": [
+        "phantom",
+        "phantom-wallet"
+      ],
+      "confidence": "high",
+      "source": "fee lands in token accounts owned by these (routes through OKX v2 or Jupiter); Codex tradeSource phantom"
+    },
+    {
+      "id": "okx",
+      "name": "OKX",
+      "short": "OK",
+      "kind": "aggregator",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "proVF4pMXVaYqmy4NjniPh4pqKNfMmsihgd4wdkCX3u",
+          "6m2CDdhRgxpH4WjvdzxAYbGxwdGUz5MziiL5jek2kBma"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x8feab81d36e7576107d5de0758c1b839be31b4f6"
+          ],
+          "base": [
+            "0x67d03631fe51b741c0c00c4e16eb662ac84381df"
+          ],
+          "bsc": [
+            "0x5994814f2c4040b863a0125a45de152a8c2a4dec"
+          ]
+        }
+      },
+      "aliases": [
+        "okx",
+        "okx-wallet",
+        "okx-dex",
+        "okx_dex"
+      ],
+      "confidence": "medium",
+      "source": "OKX DEX router: wallets (Phantom, Fomo) route through it too, so their fee wallets win; the router alone means the OKX DEX executed it"
+    },
+    {
+      "id": "binance",
+      "name": "Binance Wallet",
+      "short": "BN",
+      "kind": "wallet",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "solana": {
+        "programs": [
+          "B3111yJCeHBcA1bizdJjUFPALfhAfSRnAbJzGUtnt56A"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0xb300000b72deaeb607a12d5f54773d1c19c7028d"
+          ],
+          "base": [
+            "0xb300000b72deaeb607a12d5f54773d1c19c7028d"
+          ],
+          "bsc": [
+            "0xb300000b72deaeb607a12d5f54773d1c19c7028d"
+          ]
+        }
+      },
+      "aliases": [
+        "binance",
+        "binance-wallet",
+        "binance_wallet",
+        "binance-web3"
+      ],
+      "confidence": "high",
+      "source": "router B3111… on Solana, 0xb300…028d on EVM; Codex tradeSource binance-wallet"
+    },
+    {
+      "id": "metamask",
+      "name": "MetaMask",
+      "short": "MM",
+      "kind": "wallet",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x881d40237659c251811cec9c364ef91dc08d300c"
+          ],
+          "bsc": [
+            "0x1a1ec25dc08e98e5e93f1104b5e5cdd298707d31"
+          ],
+          "base": [
+            "0x9dda6ef3d919c9bc8885d5560999a3640431e8e6"
+          ]
+        },
+        "feeWallets": [
+          "0x11ededebf63bef0ea2d2d071bdf88f71543ec6fb"
+        ]
+      },
+      "aliases": [
+        "metamask",
+        "metamask-swaps"
+      ],
+      "confidence": "high",
+      "source": "MetaMask Swaps routers and fee wallet; Codex tradeSource metamask"
+    },
+    {
+      "id": "bitget",
+      "name": "Bitget Wallet",
+      "short": "BW",
+      "kind": "wallet",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "evm": {
+        "routers": {
+          "eth": [
+            "0xbc1d9760bd6ca468ca9fb5ff2cfbeac35d86c973"
+          ],
+          "base": [
+            "0xbc1d9760bd6ca468ca9fb5ff2cfbeac35d86c973"
+          ],
+          "bsc": [
+            "0xbc1d9760bd6ca468ca9fb5ff2cfbeac35d86c973"
+          ]
+        }
+      },
+      "aliases": [
+        "bitget",
+        "bitget-wallet"
+      ],
+      "confidence": "high",
+      "source": "router observed on chain 2026-10-03; Codex tradeSource bitget-wallet"
+    },
+    {
+      "id": "trust",
+      "name": "Trust Wallet",
+      "short": "TW",
+      "kind": "wallet",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "evm": {
+        "feeWallets": [
+          "0xad01c20d5886137e056775af56915de824c8fce5"
+        ]
+      },
+      "aliases": [
+        "trust-wallet",
+        "trust",
+        "trustwallet"
+      ],
+      "confidence": "medium",
+      "source": "Codex tradeSource trust-wallet; 0xad01…fce5 is its 0x integrator fee recipient, seen credited in swaps Codex labels Trust Wallet on Base and Ethereum (2026-10-03)"
+    },
+    {
+      "id": "rabby",
+      "name": "Rabby",
+      "short": "RB",
+      "kind": "wallet",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "evm": {
+        "feeWallets": [
+          "0x39041f1b366fe33f9a5a79de5120f2aee2577ebc"
+        ]
+      },
+      "aliases": [
+        "rabby",
+        "rabby-wallet"
+      ],
+      "confidence": "high",
+      "source": "Rabby swap fee wallet; Codex tradeSource rabby"
+    },
+    {
+      "id": "rainbow",
+      "name": "Rainbow",
+      "short": "RW",
+      "kind": "wallet",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x00000000009726632680fb29d3f7a9734e3010e2"
+          ],
+          "base": [
+            "0x00000000009726632680fb29d3f7a9734e3010e2"
+          ],
+          "bsc": [
+            "0x00000000009726632680fb29d3f7a9734e3010e2"
+          ]
+        }
+      },
+      "aliases": [
+        "rainbow",
+        "rainbow-wallet"
+      ],
+      "confidence": "high",
+      "source": "Rainbow router"
+    },
+    {
+      "id": "backpack",
+      "name": "Backpack",
+      "short": "BP",
+      "kind": "wallet",
+      "chains": [
+        "sol",
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "aliases": [
+        "backpack",
+        "backpack-wallet"
+      ],
+      "confidence": "medium",
+      "source": "Codex tradeSource backpack-wallet only"
+    },
+    {
+      "id": "mevx",
+      "name": "MevX",
+      "short": "MX",
+      "kind": "bot",
+      "chains": [
+        "sol",
+        "eth",
+        "base"
+      ],
+      "solana": {
+        "programs": [
+          "MevxQ9iQNGNQSWqa2CtDQs2BwrJA6MifzocykZAgGBr"
+        ],
+        "feeWallets": [
+          "3kxSQybWEeQZsMuNWMRJH4TxrhwoDwfv41TNMLRzFP5A",
+          "BS3CyJ9rRC4Tp8G7f86r6hGvuu3XdrVGNVpbNM9U5WRZ",
+          "4Lpvp1q69SHentfYcMBUrkgvppeEx6ovHCSYjg4UYXiq",
+          "4DGMLhJqTBAB9xs1FodvXrfbdo5YqPSfDRaK1KZFXd1V"
+        ]
+      },
+      "evm": {
+        "routers": {
+          "eth": [
+            "0x001359f88b63acf76468f6ed0781b4b26a8b33ed"
+          ],
+          "base": [
+            "0x1f915fb5fb52bd32ae54d2b98009e12615605614"
+          ]
+        }
+      },
+      "aliases": [
+        "mevx"
+      ],
+      "confidence": "medium",
+      "source": "solana-dex-parser; EVM routers observed on chain 2026-10-03 (a second ETH router with low confidence is left out)"
+    },
+    {
+      "id": "stbot",
+      "name": "STBot",
+      "short": "ST",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "Stbot61LkCD5HE4p1TDtYRt9bzkjX81pKrshZz4Awny"
+        ],
+        "feeWallets": [
+          "F34kcgMgCF7mYWkwLN3WN7KrFprr2NbwxuLvXx4fbztj",
+          "96aFQc9qyqpjMfqdUeurZVYRrrwPJG2uPV6pceu4B1yb",
+          "BTQyUXhxiLrFPD5JUANCwg4ViibmNY39McmWk4bVNxLA",
+          "4vfFG2xGZsjXQgA6ZCTzA1PgUGLppFHY9eGnh3ZVGUuz",
+          "A7XTexV13EPnhtH55qhT7qmFkgYCMAMnfXk89VWu9PCJ",
+          "GreGavLfh5sK1BeQ2WYvmk352wbyNNzQdCmqWCV8QSib",
+          "K1LRSA1DSoKBtC5DkcvnermRQ62YxogWSCZZPWQrdG5"
+        ]
+      },
+      "aliases": [
+        "stbot",
+        "solana-trading-bot"
+      ],
+      "confidence": "medium",
+      "source": "solana-dex-parser"
+    },
+    {
+      "id": "ave",
+      "name": "Ave.ai",
+      "short": "AV",
+      "kind": "terminal",
+      "chains": [
+        "sol",
+        "bsc",
+        "base",
+        "eth"
+      ],
+      "solana": {
+        "programs": [
+          "AveaiuA1emN71q9mS2QQ9BEWNAAHmp8sHSvwLFHQjufM"
+        ],
+        "feeWallets": [
+          "2416yFoX5ep69Ae8u4EoWN2b1jRMC8diygQDf4zqNAQG"
+        ]
+      },
+      "aliases": [
+        "ave",
+        "ave-ai",
+        "ave.ai"
+      ],
+      "confidence": "medium",
+      "source": "collected from public sources, not re-checked; Codex tradeSource ave-ai"
+    },
+    {
+      "id": "pepeboost",
+      "name": "Pepeboost",
+      "short": "PB",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "feeWallets": [
+          "G9PhF9C9H83mAjjkdJz4MDqkufiTPMJkx7TnKE1kFyCp"
+        ]
+      },
+      "aliases": [
+        "pepeboost"
+      ],
+      "confidence": "medium",
+      "source": "Dune bot_trades"
+    },
+    {
+      "id": "raybot",
+      "name": "Raybot",
+      "short": "RY",
+      "kind": "bot",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "feeWallets": [
+          "4mih95RmBqfHYvEfqq6uGGLp1Fr3gVS3VNSEa3JVRfQK"
+        ]
+      },
+      "aliases": [
+        "raybot"
+      ],
+      "confidence": "medium",
+      "source": "solana-dex-parser bot fee accounts"
+    },
+    {
+      "id": "moonshot-app",
+      "name": "Moonshot",
+      "short": "MS",
+      "kind": "app",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "feeWallets": [
+          "5wkyL2FLEcyUUgc3UeGntHTAfWfzDrVuxMnaMm7792Gk"
+        ]
+      },
+      "aliases": [
+        "moonshot-app"
+      ],
+      "confidence": "medium",
+      "source": "the Moonshot app's fee wallet (the Moonshot launchpad program is a venue, not this)"
+    },
+    {
+      "id": "pumpfun-app",
+      "name": "pump.fun app",
+      "short": "PF",
+      "kind": "app",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "programs": [
+          "6Vo3245eszAb5wuqEMw8mGdbfRUdKbHhDHP5LcaGuTAB"
+        ]
+      },
+      "aliases": [
+        "pumpfun-app",
+        "pump-fun-frontend",
+        "pumpfun-mobile"
+      ],
+      "confidence": "medium",
+      "source": "pump.fun's own router (mobile app); Codex tradeSource pump-fun-frontend"
+    },
+    {
+      "id": "bullpen",
+      "name": "Bullpen",
+      "short": "BU",
+      "kind": "terminal",
+      "chains": [
+        "sol"
+      ],
+      "solana": {
+        "feeWallets": [
+          "FFvD7NpgyBEeRG6xCEh5xgNuVmZq6b1WzJPjVwFN1DF5"
+        ]
+      },
+      "aliases": [
+        "bullpen"
+      ],
+      "confidence": "low",
+      "source": "Jupiter Ultra referral account (names self-chosen)"
+    },
+    {
+      "id": "kyberswap",
+      "name": "KyberSwap",
+      "short": "KS",
+      "kind": "aggregator",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "aliases": [
+        "kyberswap",
+        "kyber"
+      ],
+      "confidence": "medium",
+      "source": "Codex tradeSource kyberswap only (the router serves integrators; its ClientData event names them)"
+    },
+    {
+      "id": "llamaswap",
+      "name": "LlamaSwap",
+      "short": "LL",
+      "kind": "aggregator",
+      "chains": [
+        "eth",
+        "base",
+        "bsc"
+      ],
+      "aliases": [
+        "llamaswap"
+      ],
+      "confidence": "medium",
+      "source": "Codex tradeSource llamaswap only"
+    }
+  ],
+  "exclusions": {
+    "solana": [
+      "62qc2CNXwrYqQScmEdiZFFAnJR262PxWEuNQtxfafNgV",
+      "A7hAgCzFw14fejgCp387JUJRMNyz4j89JKnhtKU8piqW",
+      "5YxQFdt3Tr9zJLvkFccqXVUwhdTWJQc1fFg2YPbxvxeD",
+      "96gYZGLnJYVFmbjzopPSU6QiEV5fGqZNyN9nmNhvrZU5",
+      "HFqU5x63VTqvQss8hp11i4wVV8bD44PvwucfZ2bU7gRe",
+      "Cw8CFyM9FkoMi7K7Crf6HNQqf4uEMzpKw6QNghXLvLkY",
+      "ADaUMid9yfUytqMBgopwjb2DTLSokTSzL1zt6iGPaS49",
+      "DfXygSm4jCyNCybVYYK6DwvWqjKee8pbDmJGcLWNDXjh",
+      "ADuUkR4vqLUMWXxW9gh6D6L8pMSawimctcNZ5pGwDcEt",
+      "DttWaMuVvTiduZRnguLF7jNxTgiMBZ1hyAumKUiL2KRL",
+      "3AVi9Tg9Uo68tJfuvoKvqKNWKkC5wPdSSdeBnizKZ6jT",
+      "4ACfpUFoaSD9bfPdeu6DBt89gB6ENTeHBXCAi87NhDEE",
+      "D2L6yPZ2FmmmTKPgzaMKdhu6EWZcTpLy1Vhx8uvZe7NZ",
+      "9bnz4RShgq1hAnLnZbP8kbgBg1kEmcJBYQq3gQbmnSta",
+      "5VY91ws6B2hMmBFRsXkoAAdsPHBJwRfBht4DXox3xkwn",
+      "2nyhqdwKcJZR2vcqCyrYsaPVdAnFoJjiksCXJ7hfEYgD",
+      "2q5pghRs6arqVjRvT5gfgWfWcHWmw1ZuCzphgd5KfWGJ",
+      "wyvPkWjVZz1M8fHQnMMCDTQDbkManefNNhweYk5WkcF",
+      "3KCKozbAaF75qEU33jtzozcJ29yJuaLJTy2jFdzUY8bT",
+      "4vieeGHPYPG2MmyPRcYjdiDmmhN3ww7hsFNap8pVN3Ey",
+      "4TQLFNWK8AovT1gFvda5jfw2oJeRMKEmw7aH6MGBJ3or",
+      "HWEoBxYs7ssKuudEjzjmpfJVX7Dvi7wescFsVx2L5yoY",
+      "95cfoy472fcQHaw4tPGBTKpn6ZQnfEPfBgDQx6gcRmRg",
+      "3UQUKjhMKaY2S6bjcQD6yHB7utcZt5bfarRCmctpRtUd",
+      "FogxVNs6Mm2w9rnGL1vkARSwJxvLE8mujTv3LK8RnUhF",
+      "astrazznxsGUhWShqgNtAdfrzP2G83DzcWVJDxwV9bF",
+      "astra4uejePWneqNaJKuFFA8oonqCE1sqF6b45kDMZm",
+      "astra9xWY93QyfG6yM8zwsKsRodscjQ2uU2HKNL5prk",
+      "astraRVUuTHjpwEVvNBeQEgwYx9w9CFyfxjYoobCZhL",
+      "astraEJ2fEj8Xmy6KLG7B3VfbKfsHXhHrNdCQx7iGJK",
+      "astraubkDw81n4LuutzSQ8uzHCv4BhPVhfvTcYv8SKC",
+      "astraZW5GLFefxNPAatceHhYjfA1ciq9gvfEg2S47xk",
+      "astrawVNP4xDBKT7rAdxrLYiTSTdqtUr63fSMduivXK",
+      "AstrA1ejL4UeXC2SBP4cpeEmtcFPZVLxx3XGKXyCW6to",
+      "AsTra79FET4aCKWspPqeSFvjJNyp96SvAnrmyAxqg5b7",
+      "AstrABAu8CBTyuPXpV4eSCJ5fePEPnxN8NqBaPKQ9fHR",
+      "AsTRADtvb6tTmrsqULQ9Wji9PigDMjhfEMza6zkynEvV",
+      "AsTRAEoyMofR3vUPpf9k68Gsfb6ymTZttEtsAbv8Bk4d",
+      "AStrAJv2RN2hKCHxwUMtqmSxgdcNZbihCwc1mCSnG83W",
+      "Astran35aiQUF57XZsmkWMtNCtXGLzs8upfiqXxth2bz",
+      "AStRAnpi6kFrKypragExgeRoJ1QnKH7pbSjLAKQVWUum",
+      "ASTRaoF93eYt73TYvwtsv6fMWHWbGmMUZfVZPo3CRU9C"
+    ],
+    "evm": [
+      "0x4838b106fce9647bdf1e7877bf73ce8b0bad5f97",
+      "0x4848489f0b2bedd788c696e2d79b6b69d7484848"
+    ],
+    "notes": "Never a platform: pump.fun / PumpSwap protocol fee accounts, landing tips (Jito verified; Helius Sender, bloXroute, Astralane from sol-parser-sdk, unverified), EVM block-builder tips (Titan on ETH, 0x4848… on BSC). An address listed here never counts as a fee wallet, even when an override lists it."
+  }
+}

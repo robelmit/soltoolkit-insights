@@ -1,0 +1,60 @@
+{
+  "name": "@soltoolkit/holder-map",
+  "version": "0.1.0",
+  "description": "A holder map for Solana tokens: who the top holders are, which of them the token moved between, and the clusters those links form. Reads a plain RPC endpoint within a call budget.",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "token",
+    "holders",
+    "bubble-map",
+    "clusters",
+    "graph",
+    "bundles"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "vitest run test/live",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@soltoolkit/rpc": "^0.1.0",
+    "@soltoolkit/token-safety": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

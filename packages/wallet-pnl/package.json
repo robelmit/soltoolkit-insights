@@ -1,0 +1,55 @@
+{
+  "name": "@soltoolkit/wallet-pnl",
+  "version": "0.1.0",
+  "description": "Wallet performance from a trade list: realized PnL at average cost, win rate, hold time, outcome bands, a smart-money score, a copy-trading score and a dust assessment that counts recovered rent. Pure functions, no dependencies.",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "wallet",
+    "pnl",
+    "win-rate",
+    "copy-trading",
+    "smart-money",
+    "dust"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "clean": "rimraf dist .turbo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

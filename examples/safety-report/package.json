@@ -1,0 +1,22 @@
+{
+  "name": "example-safety-report",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "A graded safety report for one token, with the sell check simulated through the launchpad SDK. Nothing is signed or sent.",
+  "scripts": {
+    "start": "tsx index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@soltoolkit/launchpad-sdk": "^0.1.0",
+    "@soltoolkit/rpc": "^0.1.0",
+    "@soltoolkit/token-safety": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "@soltoolkit/app-registry",
+  "version": "0.1.0",
+  "description": "An open list of trading terminals, bots and wallet apps with what identifies each on chain, and a detector that tells which one placed a Solana or EVM transaction.",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "evm",
+    "trading-bot",
+    "terminal",
+    "attribution",
+    "fee-wallet",
+    "registry"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./registry.json": "./registry.json"
+  },
+  "files": [
+    "dist",
+    "registry.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "vitest run test/live",
+    "clean": "rimraf dist .turbo"
+  },
+  "devDependencies": {
+    "@soltoolkit/rpc": "^0.1.0",
+    "@types/node": "^22.10.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

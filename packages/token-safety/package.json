@@ -1,0 +1,58 @@
+{
+  "name": "@soltoolkit/token-safety",
+  "version": "0.1.0",
+  "description": "Token safety checks for Solana: eight checks with a grade where unknown never counts as a pass, an on-chain reader that needs only an RPC endpoint, and copycat-token detection.",
+  "license": "MIT",
+  "keywords": [
+    "solana",
+    "token",
+    "safety",
+    "rug-check",
+    "token-2022",
+    "honeypot"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "vitest run test/live",
+    "clean": "rimraf dist .turbo"
+  },
+  "dependencies": {
+    "@soltoolkit/rpc": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

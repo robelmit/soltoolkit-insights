@@ -1,0 +1,21 @@
+{
+  "name": "example-wallet-report",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "A wallet's recent trading record read from a plain RPC endpoint: realized PnL, win rate, outcome bands and scores. Reads only.",
+  "scripts": {
+    "start": "tsx index.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@soltoolkit/rpc": "^0.1.0",
+    "@soltoolkit/wallet-pnl": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

@@ -27,7 +27,7 @@ pnpm --filter example-holder-map-viewer start        # a holder map in the brows
 
 ## Develop
 
-Node 20 or newer and pnpm.
+Node 22.13 or newer and pnpm, to work on the repository. The published packages run on Node 20 or newer.
 
 This repository uses packages of [soltoolkit-sdk](https://github.com/robelmit/soltoolkit-sdk). Until those are on npm, clone it beside this one and run `pnpm install && pnpm build` there first; `.pnpmfile.cjs` then links the local copies.
 

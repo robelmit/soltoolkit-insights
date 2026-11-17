@@ -44,7 +44,7 @@ pnpm check        # build, typecheck, test, lint
 | [soltoolkit-feed](https://github.com/robelmit/soltoolkit-feed) | The launch feed: a Rust indexer for launches, trades and migrations |
 | **soltoolkit-insights** (this one) | Token safety, holder maps and their viewer, wallet PnL, the trading-app registry |
 | [soltoolkit-bots](https://github.com/robelmit/soltoolkit-bots) | Telegram and Discord community bots |
-| [soltoolkit-agents](https://github.com/robelmit/soltoolkit-agents) | A read-only MCP server for AI agents, and an HTTP API |
+| [soltoolkit-agents](https://github.com/robelmit/soltoolkit-agents) | A read-only MCP server for AI agents, an HTTP API, and the soltoolkit Live site |
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) to contribute and [SECURITY.md](SECURITY.md) to report a vulnerability.
 

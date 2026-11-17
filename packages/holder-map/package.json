@@ -3,14 +3,21 @@
   "version": "0.1.0",
   "description": "A holder map for Solana tokens: who the top holders are, which of them the token moved between, and the clusters those links form. Reads a plain RPC endpoint within a call budget.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robelmit/soltoolkit-insights.git",
+    "directory": "packages/holder-map"
+  },
+  "homepage": "https://github.com/robelmit/soltoolkit-insights/tree/main/packages/holder-map#readme",
+  "bugs": {
+    "url": "https://github.com/robelmit/soltoolkit-insights/issues"
+  },
   "keywords": [
     "solana",
-    "token",
     "holders",
     "bubble-map",
     "clusters",
-    "graph",
-    "bundles"
+    "on-chain-analytics"
   ],
   "type": "module",
   "main": "./dist/index.cjs",

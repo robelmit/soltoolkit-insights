@@ -3,14 +3,21 @@
   "version": "0.1.0",
   "description": "A React viewer for a token's holder map: one bubble for each holder, sized by share, coloured by cluster, with the links between them. Renders on a server, with a legend, a tooltip and a table of the same data.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robelmit/soltoolkit-insights.git",
+    "directory": "packages/holder-map-react"
+  },
+  "homepage": "https://github.com/robelmit/soltoolkit-insights/tree/main/packages/holder-map-react#readme",
+  "bugs": {
+    "url": "https://github.com/robelmit/soltoolkit-insights/issues"
+  },
   "keywords": [
     "solana",
-    "token",
     "holders",
     "bubble-map",
-    "clusters",
     "react",
-    "svg"
+    "visualization"
   ],
   "type": "module",
   "main": "./dist/index.cjs",

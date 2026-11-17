@@ -3,14 +3,21 @@
   "version": "0.1.0",
   "description": "Wallet performance from a trade list: realized PnL at average cost, win rate, hold time, outcome bands, a smart-money score, a copy-trading score and a dust assessment that counts recovered rent. Pure functions, no dependencies.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robelmit/soltoolkit-insights.git",
+    "directory": "packages/wallet-pnl"
+  },
+  "homepage": "https://github.com/robelmit/soltoolkit-insights/tree/main/packages/wallet-pnl#readme",
+  "bugs": {
+    "url": "https://github.com/robelmit/soltoolkit-insights/issues"
+  },
   "keywords": [
     "solana",
     "wallet",
     "pnl",
-    "win-rate",
-    "copy-trading",
-    "smart-money",
-    "dust"
+    "trading",
+    "analytics"
   ],
   "type": "module",
   "main": "./dist/index.cjs",

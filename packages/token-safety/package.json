@@ -3,13 +3,21 @@
   "version": "0.1.0",
   "description": "Token safety checks for Solana: eight checks with a grade where unknown never counts as a pass, an on-chain reader that needs only an RPC endpoint, and copycat-token detection.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robelmit/soltoolkit-insights.git",
+    "directory": "packages/token-safety"
+  },
+  "homepage": "https://github.com/robelmit/soltoolkit-insights/tree/main/packages/token-safety#readme",
+  "bugs": {
+    "url": "https://github.com/robelmit/soltoolkit-insights/issues"
+  },
   "keywords": [
     "solana",
     "token",
     "safety",
     "rug-check",
-    "token-2022",
-    "honeypot"
+    "spl-token"
   ],
   "type": "module",
   "main": "./dist/index.cjs",

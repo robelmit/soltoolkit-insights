@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "description": "An open list of trading terminals, bots and wallet apps with what identifies each on chain, and a detector that tells which one placed a Solana or EVM transaction.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robelmit/soltoolkit-insights.git",
+    "directory": "packages/app-registry"
+  },
+  "homepage": "https://github.com/robelmit/soltoolkit-insights/tree/main/packages/app-registry#readme",
+  "bugs": {
+    "url": "https://github.com/robelmit/soltoolkit-insights/issues"
+  },
   "keywords": [
     "solana",
-    "evm",
-    "trading-bot",
-    "terminal",
+    "trading-bots",
+    "terminals",
     "attribution",
-    "fee-wallet",
     "registry"
   ],
   "type": "module",

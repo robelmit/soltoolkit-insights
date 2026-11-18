@@ -71,18 +71,24 @@ const HTML = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Holder map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..800&display=swap">
 <style>
-  :root { color-scheme: light dark; --page: #f4f4f1; --ink: #0b0b0b; }
-  @media (prefers-color-scheme: dark) { :root[data-theme="auto"], :root:not([data-theme]) { --page: #111110; --ink: #f0efec; } }
+  /* The soltoolkit look: edged cards, pill tabs, DM Sans. The theme buttons still switch the map's own theme. */
+  :root { color-scheme: light dark; --page: #f4f4f1; --ink: #0b0b0b; --card: #ffffff; --line: #e2e2de; --edge: #d4d4cf; --muted: #ebebe7; --soft: #6b6b68; }
+  @media (prefers-color-scheme: dark) { :root[data-theme="auto"], :root:not([data-theme]) { --page: #0a0a0b; --ink: #ededee; --card: #141416; --line: #2a2a2d; --edge: #1f1f22; --muted: #1c1c1f; --soft: #9a9a9d; } }
   :root[data-theme="light"] { color-scheme: light; }
-  :root[data-theme="dark"] { color-scheme: dark; --page: #111110; --ink: #f0efec; }
-  body { margin: 0; padding: 24px 16px; background: var(--page); color: var(--ink); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 720px; margin: 0 auto; }
-  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 12px; }
-  h1 { margin: 0; font-size: 16px; font-weight: 600; overflow-wrap: anywhere; }
-  header button { font: inherit; padding: 2px 10px; }
-  header button[aria-pressed="true"] { font-weight: 600; }
-  .hhm { border-radius: 10px; }
+  :root[data-theme="dark"] { color-scheme: dark; --page: #0a0a0b; --ink: #ededee; --card: #141416; --line: #2a2a2d; --edge: #1f1f22; --muted: #1c1c1f; --soft: #9a9a9d; }
+  body { margin: 0; padding: 24px 16px; background: var(--page); color: var(--ink); font: 14px/1.5 "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 20px; box-shadow: 0 2px 0 var(--edge); }
+  header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+  h1 { margin: 0; font-size: 17px; font-weight: 800; letter-spacing: -0.02em; overflow-wrap: anywhere; }
+  [role="group"] { display: inline-flex; gap: 2px; padding: 4px; border-radius: 999px; background: var(--muted); box-shadow: inset 0 0 0 0.5px var(--line); }
+  header button { font: inherit; font-size: 13px; font-weight: 500; text-transform: capitalize; height: 30px; padding: 0 14px; border: 0; border-radius: 999px; background: transparent; color: var(--soft); cursor: pointer; }
+  header button[aria-pressed="true"] { font-weight: 700; color: var(--ink); background: var(--card); box-shadow: 0 1px 0 var(--edge), inset 0 0 0 0.5px var(--line); }
+  #selected { margin: 12px 2px 0; font-size: 13px; color: var(--soft); }
+  .hhm { border-radius: 14px; }
 </style>
 </head>
 <body>
